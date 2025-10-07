@@ -13,12 +13,14 @@ echo ======================================================
 echo 1. Disable Microsoft Account Login
 echo 2. Enable Microsoft Account Login
 echo 3. Exit
+echo 4. Exit and Restart the system
 echo ======================================================
-set /p choice=Enter your choice (1/2/3): 
+set /p choice=Enter your choice (1/2/3/4): 
 
 if "%choice%"=="1" goto disable
 if "%choice%"=="2" goto enable
 if "%choice%"=="3" exit
+if "%choice%"=="4" goto restart
 goto menu
 
 :disable
@@ -50,3 +52,9 @@ echo Microsoft Account login has been ENABLED.
 echo Please restart your computer to apply changes.
 pause
 goto menu
+
+:restart
+echo.
+echo Restarting your system...
+shutdown /r /t 5
+exit
