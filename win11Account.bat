@@ -56,5 +56,5 @@ goto menu
 :restart
 echo.
 echo Restarting your system...
-shutdown /r /t 5
+shutdown /r /t 0
 exit
